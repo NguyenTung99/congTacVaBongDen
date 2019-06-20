@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bóng đèn và công tác</title>
+</head>
+<body>
+<script>
+
+    let Electric = function () {
+        this.status = true;
+
+        this.turnOn = function () {
+            this.status = true;
+        };
+
+        this.turnOff = function () {
+            this.status = false;
+        }
+    };
+
+    let SwichButton = function () {
+
+
+        this.connectToLamp = function (Electric) {
+            this.electricButton = Electric;
+        };
+        this.switchOff = function () {
+            this.electricButton.turnOff();
+        };
+        this.switchOn = function () {
+            this.electricButton.turnOn()
+        }
+    };
+
+    let elec = new Electric();
+    let switchButton = new SwichButton();
+    switchButton.connectToLamp(elec);
+
+
+    switchButton.switchOn();
+    alert(elec.status);
+
+    switchButton.switchOff();
+    alert(elec.status);
+
+    switchButton.switchOn();
+    alert(elec.status);
+    switchButton.switchOff();
+    alert(elec.status);
+    switchButton.switchOn();
+    alert(elec.status);
+    switchButton.switchOff();
+    alert(elec.status);
+    switchButton.switchOn();
+    alert(elec.status);
+    switchButton.switchOff();
+    alert(elec.status);
+    switchButton.switchOn();
+    alert(elec.status);
+    switchButton.switchOff();
+    alert(elec.status);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
